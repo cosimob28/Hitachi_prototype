@@ -1,18 +1,20 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class TrainFollowBinary : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public Transform binary;
+    // private float train_velocity
     void Start()
     {
-        
+        binary = GetComponent<Transform>();
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
+        TrainFollowBinaryStandar();
+    }
+
+    void TrainFollowBinaryStandar() {
+        gameObject.transform.position += Vector3.back * Time.deltaTime; // insert param velocity here
     }
 }
