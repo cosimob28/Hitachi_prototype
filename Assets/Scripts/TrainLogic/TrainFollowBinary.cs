@@ -4,6 +4,7 @@ public class TrainFollowBinary : MonoBehaviour
 {
     public Transform binary;
     // private float train_velocity
+    // private float angular_velocity
     void Start()
     {
         binary = GetComponent<Transform>();
@@ -17,4 +18,6 @@ public class TrainFollowBinary : MonoBehaviour
     void TrainFollowBinaryStandar() {
         gameObject.transform.position += Vector3.back * Time.deltaTime; // insert param velocity here
     }
+
+    // void methodToAllowTrainToCurve()
 }
