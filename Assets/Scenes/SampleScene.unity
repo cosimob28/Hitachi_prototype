@@ -151,7 +151,7 @@ Transform:
   - {fileID: 1922283914}
   - {fileID: 1912595473}
   m_Father: {fileID: 572120690}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &201955362
 GameObject:
@@ -987,13 +987,13 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
+  - {fileID: 929969520}
   - {fileID: 826827325}
   - {fileID: 61095266}
   - {fileID: 1704234352}
   - {fileID: 1570378069}
   - {fileID: 1260383235}
   - {fileID: 1284050642}
-  - {fileID: 929969520}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1484,7 +1484,7 @@ Transform:
   - {fileID: 1109569943}
   - {fileID: 852237106}
   m_Father: {fileID: 572120690}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &852237105
 GameObject:
@@ -1768,11 +1768,11 @@ RectTransform:
   m_LocalScale: {x: 0.5375, y: 0.25734374, z: 1}
   m_Children: []
   m_Father: {fileID: 572120690}
-  m_RootOrder: 6
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -104}
+  m_AnchoredPosition: {x: 0, y: -109}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &929969521
@@ -2274,7 +2274,7 @@ Transform:
   - {fileID: 351158986}
   - {fileID: 430044826}
   m_Father: {fileID: 572120690}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1284050641
 GameObject:
@@ -2306,7 +2306,7 @@ Transform:
   - {fileID: 1967876138}
   - {fileID: 776464321}
   m_Father: {fileID: 572120690}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1495556098
 GameObject:
@@ -2404,7 +2404,7 @@ Transform:
   - {fileID: 901177597}
   - {fileID: 1154270891}
   m_Father: {fileID: 572120690}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1704234351
 GameObject:
@@ -2436,7 +2436,7 @@ Transform:
   - {fileID: 2017016864}
   - {fileID: 214768319}
   m_Father: {fileID: 572120690}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1912595472
 GameObject:
