@@ -3580,9 +3580,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   train_position: {fileID: 0}
   station_position:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 1314325844}
+  - {fileID: 210549228}
+  - {fileID: 957609012}
   N_STATION: 3
 --- !u!114 &986981823
 MonoBehaviour:
@@ -4417,15 +4417,26 @@ MonoBehaviour:
   m_Value: 0
   m_Options:
     m_Options:
-    - m_Text: Option A
+    - m_Text: Station1
       m_Image: {fileID: 0}
-    - m_Text: Option B
+    - m_Text: Station2
       m_Image: {fileID: 0}
-    - m_Text: Option C
+    - m_Text: Station3
       m_Image: {fileID: 0}
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 986981822}
+        m_MethodName: SetTrainPositionFromStation
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_AlphaFadeSpeed: 0.15
 --- !u!114 &1508462654
 MonoBehaviour:
@@ -5645,7 +5656,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Option A
+  m_text: Station1
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
