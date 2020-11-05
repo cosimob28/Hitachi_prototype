@@ -32,21 +32,18 @@ public class ChangeStartStation : MonoBehaviour
 
         if (_dropdown.value == station1)
         {
-            train_position.position += GameObject.Find("Stazione_1").GetComponent<Transform>().position;
-            new WaitForSeconds(0.2f);
-            train_position.position += Vector3.back * Time.deltaTime;
+            train_position.position = GameObject.Find("Stazione_1").GetComponent<Transform>().position + (Vector3.right * 1.5f);
+            //train_position.position += Vector3.back * Time.deltaTime;
         }
         else if (_dropdown.value == station2)
         {
-            train_position.position += GameObject.Find("Stazione_2").GetComponent<Transform>().position;
-            new WaitForSeconds(0.2f);
-            train_position.position += Vector3.back * Time.deltaTime;
+            train_position.position = GameObject.Find("Stazione_2").GetComponent<Transform>().position + (Vector3.right*1.5f);
+            //train_position.position += Vector3.back * Time.deltaTime;
         }
         else if (_dropdown.value == station3)
         {
-            train_position.position += GameObject.Find("Stazione_3").GetComponent<Transform>().position;
-            new WaitForSeconds(0.2f);
-            train_position.position += Vector3.back * Time.deltaTime;
+            train_position.position = GameObject.Find("Stazione_3").GetComponent<Transform>().position + (Vector3.right * 1.5f);
+            //train_position.position += Vector3.back * Time.deltaTime;
         }
         else
         {
