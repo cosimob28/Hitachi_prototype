@@ -1,31 +1,21 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class ChangeStartStation : MonoBehaviour
 {
     public Transform train_position;
-    [SerializeField]
-    public Transform[] station_position;
 
-    Dropdown dropDown;
-    public int N_STATION = 3;
+    public Dropdown _dropdown;
 
-    // https://answers.unity.com/questions/1569855/search-in-dropdown-options.html
+    void Awake()
+    {
+        _dropdown = GameObject.Find("Dropdown").GetComponent<Dropdown>();
+    }
 
     void Start()
     {
-        train_position = GameObject.Find("Treno").GetComponent<Transform>();
-        station_position = new Transform[N_STATION];
-
-        dropDown = GameObject.Find("Dropdown").GetComponent<Dropdown>();
-
-        for (int i = 0; i < N_STATION+1; ++i)
-        {
-            station_position[i] = GameObject.Find("Stazione_" + i.ToString()).GetComponent<Transform>();
-            dropDown.value = i;
-        }
+        _dropdown = GameObject.Find("Dropdown").GetComponent<Dropdown>();
     }
 
     void Update()
@@ -33,11 +23,46 @@ public class ChangeStartStation : MonoBehaviour
         SetTrainPositionFromStation();
     }
 
-    public void SetTrainPositionFromStation() {
-        if (dropDown.value == 1)
+    public void SetTrainPositionFromStation()
+    {
+
+        int station1 = GetIndexByName(_dropdown,"Station1");
+        int station2 = GetIndexByName(_dropdown, "Station2");
+        int station3 = GetIndexByName(_dropdown, "Station3");
+
+        if (_dropdown.value == station1)
         {
-            train_position.localPosition = GameObject.Find("Stazione_3").GetComponent<Transform>().localPosition;
+            train_position.position += GameObject.Find("Stazione_1").GetComponent<Transform>().position;
+            new WaitForSeconds(0.2f);
+            train_position.position += Vector3.back * Time.deltaTime;
         }
-        
+        else if (_dropdown.value == station2)
+        {
+            train_position.position += GameObject.Find("Stazione_2").GetComponent<Transform>().position;
+            new WaitForSeconds(0.2f);
+            train_position.position += Vector3.back * Time.deltaTime;
+        }
+        else if (_dropdown.value == station3)
+        {
+            train_position.position += GameObject.Find("Stazione_3").GetComponent<Transform>().position;
+            new WaitForSeconds(0.2f);
+            train_position.position += Vector3.back * Time.deltaTime;
+        }
+        else
+        {
+            train_position.position += Vector3.back * Time.deltaTime; 
+        }
+    }
+
+    public static int GetIndexByName(Dropdown dropDown, string name)
+    {
+        if (dropDown == null) { Debug.Log("dropdown null"); return -1; } // or exception
+        if (string.IsNullOrEmpty(name) == true) { return -1; }
+        List<Dropdown.OptionData> list = dropDown.options;
+        for (int i = 0; i < list.Count; i++)
+        {
+            if (list[i].text.Equals(name)) { return i; }
+        }
+        return -1;
     }
 }
