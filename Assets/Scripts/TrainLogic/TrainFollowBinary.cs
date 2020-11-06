@@ -10,13 +10,14 @@ public class TrainFollowBinary : MonoBehaviour
         binary = GetComponent<Transform>();
     }
 
-    void Update()
+    void FixedUpdate()
     {
         TrainFollowBinaryStandar();
     }
 
-    void TrainFollowBinaryStandar() {
-        gameObject.transform.position += Vector3.back * Time.deltaTime; // insert param velocity here
+    void TrainFollowBinaryStandar()
+    {
+        gameObject.transform.position += Vector3.back * 1.1f * Time.deltaTime; // insert param velocity here
     }
 
     // void methodToAllowTrainToCurve()
