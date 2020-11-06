@@ -5,6 +5,7 @@ public class TrainFollowBinary : MonoBehaviour
     public Transform binary;
     // private float train_velocity
     // private float angular_velocity
+
     void Start()
     {
         binary = GetComponent<Transform>();
