@@ -2913,6 +2913,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 336a4a84f773c6b40b08244d5e1b5fbe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  train_position: {fileID: 0}
+  _dropdown: {fileID: 0}
 --- !u!114 &986981823
 MonoBehaviour:
   m_ObjectHideFlags: 0
